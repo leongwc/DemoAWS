@@ -19,14 +19,6 @@ resource "aws_security_group" "allow_tls" {
     cidr_blocks      = [aws_vpc.main.cidr_block]
   }
 
-  ingress {
-    description      = "5000 from VPC"
-    from_port        = 5000
-    to_port          = 5000
-    protocol         = "tcp"
-    cidr_blocks      = [aws_vpc.main.cidr_block]
-  }
-  
   egress {
     from_port        = 0
     to_port          = 0
